@@ -1,0 +1,56 @@
+{
+  "name": "your-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "dependencies": {
+    "electron-is-dev": "^3.0.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "latest",
+    "electron-builder": "latest",
+    "vite": "^6.2.4"
+  },
+  "build": {
+    "appId": "com.yourapp.id",
+    "productName": "YourAppName",
+    "asar": true,
+    "files": [
+      "main.js",
+      "index.html",
+      "preload.js",
+      "node_modules/**/*",
+      "dist/**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "build/icon.icns"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ],
+      "icon": "build/icon.ico"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "build/"
+    }
+  }
+}
