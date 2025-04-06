@@ -21,7 +21,7 @@ import threading
 import time
 
 # Configure Google Generative AI
-genai.configure(api_key="AIzaSyA69DP42ZXla9QBcS-9sJ5AXrkRMKI1FQ4")
+genai.configure(api_key="Your api key")
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 # Initialize webcam with optimal settings
@@ -121,7 +121,7 @@ def fetch_stock_image_async(query, callback):
             return
 
         try:
-            api_key = 'E9NlraR_iQT3VJUVBx-T5HPwscafFgEDCddVIt3gUzg'
+            api_key = 'your api key'
             url = f'https://api.unsplash.com/photos/random?query={query}&client_id={api_key}'
             response = requests.get(url, timeout=5)
 
